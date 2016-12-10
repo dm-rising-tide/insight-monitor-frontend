@@ -1,0 +1,412 @@
+@charset "utf-8";
+@import "cnb_tool_less.less";
+html, body {
+    height: 100%;
+}
+/*********** 公共样式 ***********/ 
+.font-style {
+    color: #ccc;
+    font-size: 14px;
+}
+.big-module,
+.small-module {
+    float: left;
+    width: 238px;
+    height: 208px;
+    margin: 0 24px 24px 0;
+    padding: 15px 15px 0 15px;
+    border: 1px solid #f5f5f5;
+    border-radius: 6px;
+    > h3 {
+        color: #333333;
+        font-size: 14px;
+    }
+    > h3 {
+        margin-bottom: 24px;
+    }
+}
+.big-module {
+    width: 384px;
+    height: 327px;
+}
+.com-edit-icon {
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    background: url(../images/editIcon.png) center center no-repeat;
+}
+.table-module {
+    position: absolute;
+    width: 378px;
+    margin: 0 29px 14px 0;
+    > .con-element-list {
+        border: 1px solid #f5f5f5;
+        border-bottom-width: 0; 
+        border-radius: 3px;
+    }
+    > h3 {
+        padding: 0 0 13px;
+        color: #6666ff;
+        font-size: 14px;
+    }
+}
+/*********** 页面样式 ***********/ 
+.wrap {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 73px;
+    // 头部
+    > header {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 88;
+        width: 1200px;
+        margin-left: -600px;
+        > section,
+        > h1 {
+            float: left;
+            height: 73px;
+        }
+        > section {
+            width: 280px;
+        }
+        > h1 {
+            width: 890px;
+            padding-left: 30px;
+            line-height: 73px;
+            background-color: #6666ff;
+            color: #fff;
+            font-size: 16px;
+        }
+        border-bottom: 1px solid #ccc;
+        box-shadow: 0 0 5px #888;
+    }
+    // 页面内容区域
+    > .main {
+        // 左侧导航
+        > .nav {
+            float: left;
+            width: 209px;
+            min-height: 800px;
+            border-right: 1px solid #ccccff;
+            background-color: #f5f5f5;
+            > .add-module {
+                position: relative;
+                display: block;
+                height: 66px;
+                padding-left: 90px;
+                border-bottom: 1px solid #ccccff;
+                line-height: 66px;
+                color: #cccccc;
+                font-size: 14px;
+                cursor: pointer;
+                &:before {
+                    position: absolute;
+                    left: 59px;
+                    top: 24px;
+                    content: "\200B";
+                    width: 23px;
+                    height: 23px;
+                    background: url(../images/addModule.png) no-repeat;
+                }
+            } 
+            > a {
+                display: block;
+                padding: 29px 0;
+                text-align: center;
+                color: #333333;
+                font-size: 14px;
+                transition: color 0.3s;
+                &:hover {
+                    background-color: #fff;
+                    color: #6666ff;
+                }
+            }
+            > .sel-module-nav {
+                background-color: #fff;
+                color: #6666ff;             
+            }
+        }
+        > .main-con {
+            float: right;
+            width: 864px;
+            min-height: 800px;
+            padding: 30px 68px 0 58px;
+        }   
+        // 内容区导航
+        .con-opt {
+            position: relative;
+            margin-bottom: 34px;
+            > span,
+            > strong {
+                float: left;
+                height: 31px;
+                text-align: center;
+                line-height: 31px;
+            }
+            > span {
+                border: 1px solid #ccc;
+                .font-style;
+                border-radius: 15px;
+                cursor: pointer;           
+            }
+            > span:nth-child(1) {
+                width: 156px;
+            }
+            > span:nth-child(4) {
+                width: 77px;
+            }
+            > strong {
+                width: 295px;
+                margin: 0 207px 0 123px;
+                > a {
+                    float: left;
+                    width: 145px;
+                    height: 31px;
+                    border: 1px solid #9999ff;
+                    background-color: #fff;
+                    color: #6666ff;
+                    font-size: 14px;
+                }
+                > a:nth-child(1) {
+                    border-radius: 15px 0 0 15px;
+                }
+                > a:nth-child(2) {
+                    border-radius: 0 15px 15px 0;
+                }
+                > .sel-config {
+                    background-color: #6666ff;
+                    color: #fff;
+                }
+            }
+        }
+        .con-outer {
+            overflow: hidden;
+            width: 864px;
+            min-height: 705px;
+        }
+        .con-inner {
+            width: 1000px;
+        }
+        .monitor-config {
+            display: none;
+        }
+        // 访问统计
+        .con-visit {
+            > p:before,
+            > p {
+                height: 34px;
+                line-height: 34px;
+                color: #6666ff;
+                font-size: 18px;
+            }
+            > p:before {
+                display: inline-block;
+                width: 70px;
+                margin-right: 42px;
+                color: #333333;
+                font-size: 14px;
+                text-align: right;
+            }
+            > p:nth-child(2):before {
+                content: "UV";
+            }
+            > p:nth-child(3):before {
+                content: "PV";
+            }
+            > p:nth-child(4):before {
+                content: "平均UV";
+            }
+            > p:nth-child(5):before {
+                content: "平均PV";
+            }
+        }
+        // 到达统计
+        .con-arrive {
+            position: relative;
+            > p:nth-child(2) {
+                margin-top: 126px;
+                padding: 0 6px;
+                color: #6666ff;
+                font-size: 12px;
+                span {
+                    position: relative;
+                    float: left;
+                }
+                span:before {
+                    left: 10px;
+                    content: "上传";
+                }
+                em {
+                    position: relative;
+                    float: right;
+                }
+                em:before {
+                    right: 10px;
+                    content: "完成";
+                }
+                em:before,
+                span:before {
+                    position: absolute;
+                    top: -28px;
+                    color: #ccc;                    
+                    font-size: 14px;
+                }
+            }
+            > p:nth-child(3) {
+                position: absolute;
+                top: 61px;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                line-height: 80px;
+                color: #6666ff;
+                font-size: 66px;
+                &:before {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    content: '\200B';
+                    width: 133px;
+                    height: 10px;
+                    margin-left: -66.5px; 
+                    background: url(../images/arriveArrow.png) no-repeat;
+                }
+                &:after {
+                    content: '%';  
+                    font-size: 14px;                  
+                }
+            }
+        }
+        // 时长统计
+        .con-checkbox,
+        .con-time {
+            width: 414px;
+            padding: 15px 0 0;
+            > h3 {
+                padding: 0 15px;
+            }
+        }
+        // 页面配置导航
+        .web-opt {
+            > span {
+                position: relative;
+                float: left;
+                width: 91px;
+                height: 30px;
+                margin-left: 20px;
+                line-height: 30px;
+                color: #ccc;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            > span:first-child {
+                margin-left: 0;
+            }
+            border-bottom: 1px solid #ccccff;
+            .sel-web-config {
+                color: #6666ff;
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    content: "\200B";
+                    width: 100%;
+                    height: 2px;
+                    background-color: #ccccff;
+                }
+                > .com-edit-icon {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;
+                }
+            }
+        }
+        .web-config {
+            display: none;
+            > p {
+                padding: 13px 0 18px;
+                font-size: 14px;
+                > span {
+                    float: right;
+                    color: #333;
+                    margin-left: 30px;
+                }
+                > span:nth-child(1):before {
+                    content: "页面PV：";
+                    color: #ccc;
+                }
+                > span:nth-child(2):before {
+                    content: "页面UV：";
+                    color: #ccc;
+                }
+            }
+        }
+        .web-inner {
+            position: relative;
+            width: 814px;
+            .con-element-list {
+                th,
+                table {
+                    /*设置表格的宽度*/
+                    width: 380px;
+                    /*设置表格布局算法：*/
+                    table-layout:fixed; 
+                    text-align: center;
+                    div {
+                        padding: 0 5px;
+                    }
+                }
+                th {
+                    color: #cccccc;
+                    font-size: 12px;
+                }
+                td {
+                    color: #333;
+                    font-size: 14px;
+                }
+                .name-col {
+                    width: 140px;
+                    border-right: 1px solid #f5f5f5;
+                }
+                .uv-col {
+                    width: 118px;
+                    border-right: 1px solid #f5f5f5;
+                }
+                .pv-col {
+                    width: 119px;
+                }
+                tr {
+                    height: 41px;
+                    border-bottom: 1px solid #f5f5f5;
+                }
+            }
+        }
+    }
+    .input-group {
+        position: absolute;
+        left: 164px;
+        top: -5px;
+        z-index: 99;
+        width: 200px;
+        display: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    // 底部
+    > footer {
+        height: 80px;
+        border-top: 1px solid #ccccff;
+        line-height: 80px;
+        text-align: center;
+        color: #888;
+        font-size: 14px;
+    }
+}

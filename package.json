@@ -1,0 +1,30 @@
+{
+  "name": "StagingFinancial",
+  "version": "0.0.1",
+  "description": "Pages for Staging Financial App",
+  "devDependencies": {
+    "browser-sync": "^2.17.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-asset-rev": "0.0.15",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.3",
+    "run-sequence": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

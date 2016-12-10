@@ -1,0 +1,72 @@
+/* 
+ * @Author: 陈能堡 - 梦幻雪冰
+ *          http://www.h5course.com/
+ *          http://m18050905128.blog.163.com/
+ *          https://github.com/chennengbao
+ * @Date:   2016-08-25 19:27:59
+ * @Last Modified by:   陈能堡 - 梦幻雪冰
+ * @Last Modified time: 2016-10-26 16:22:38
+ *
+ * @cnb-radius      补全CSS3圆角的内核前缀
+ * @cnb-shadow      补全CSS3阴影的内核前缀
+ * @cnb-transition  补全CSS3过渡的内核前缀
+ * @cnb-animation   补全CSS3动画的内核前缀
+ * @cnb-transform   补全CSS3变形的内核前缀 
+ */
+.cnb-radius(@radius) {
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.cnb-shadow(@x; @y; @blur; @spread; @color) {
+    -webkit-box-shadow: @x @y @blur @spread @color;
+    box-shadow: @x @y @blur @spread @color;
+}
+.cnb-shadow(@x; @y; @blur; @spread; @color; @inset) {
+    -webkit-box-shadow: @x @y @blur @spread @color @inset;
+    box-shadow: @x @y @blur @spread @color @inset;
+}
+
+.cnb-transition(@name; @duration; @timing) {
+    -webkit-transition: @arguments;
+    transition: @arguments;
+}
+.cnb-transition(@name; @duration; @timing; @delay) {
+    -webkit-transition: @arguments;
+    transition: @arguments;
+}
+
+.cnb-animation(@name; @duration; @timing) {
+    -webkit-animation: @arguments;
+    animation: @arguments;
+}
+.cnb-animation(@name; @duration; @timing; @delay) {
+    -webkit-animation: @arguments;
+    animation: @arguments;
+}
+.cnb-animation(@name; @duration; @timing; @count) {
+    -webkit-animation: @arguments;
+    animation: @arguments;
+}
+.cnb-animation(@name; @duration; @timing; @delay; @count) {
+    -webkit-animation: @arguments;
+    animation: @arguments;
+}
+
+.cnb-transform(@trans1) {
+    -webkit-transform: @trans1;
+    transform: @trans1;
+}
+.cnb-transform(@trans1; @trans2) {
+    -webkit-transform: @trans1 @trans2;
+    transform: @trans1 @trans2;
+}
+.cnb-transform(@trans1; @trans2; @trans3) {
+    -webkit-transform: @trans1 @trans2 @trans3;
+    transform: @trans1 @trans2 @trans3;
+}
+
+.cnb-sizing {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>千机</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css?v=cd18814"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css?v=f06d760" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=4305561" />
+    <link rel="stylesheet" type="text/css" href="css/cnb_tool.css?v=7675f53"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=7fc5f58" />
+</head>
+<body>
+    <div class="wrap">
+        <!-- 页面头部 -->
+        <header class="clearfix">
+            <section>
+                <a href=""><img src="images/logo.jpg?v=4afdff4" height="73" width="280" alt="千机" /></a>
+            </section>
+            <h1>洞察万法千决，明悉世事命理</h1>
+        </header>
+        <!-- 页面内容区域 -->
+        <section class="main clearfix">
+            <!-- 左侧导航 -->
+            <nav class="nav">
+                <span class="add-module">添加模块</span>
+            </nav>
+            <section class="main-con">
+                <!-- 内容区导航 -->
+                <div class="con-opt clearfix">
+                    <span>-选择统计时间-</span>
+                    <div class="input-daterange input-group" id="datepicker">
+                        <input type="text" class="input-sm form-control" name="start" />
+                        <span class="input-group-addon">to</span>
+                        <input type="text" class="input-sm form-control" name="end" />
+                    </div>
+                    <strong>
+                        <a href="#" class="sel-config">监控指标</a>
+                        <a href="#">页面配置</a>
+                    </strong>
+                    <span>-添加-</span>
+                </div>
+                <!-- 内容区 -->
+                <div class="con-count">
+                    <div class="con-outer">
+                        <!-- 监控配置 -->
+                        <div class="monitor-config cnb-show">
+                            <div class="con-inner clearfix">
+                                <div class="layout-top"></div>
+                                <div class="layout-bot"></div>
+                            </div>
+                        </div> 
+                        <!-- 页面配置 -->
+                        <div class="web-config">
+                            <div class="web-opt clearfix">
+                                <span class="sel-web-config">测试页面<b class="com-edit-icon"></b></span>
+                                <span>测试页面</span>
+                            </div>
+                            <p class="clearfix">
+                                <span>1234</span>
+                                <span>1234</span>
+                            </p>
+                            <div class="web-outer">
+                                <div id="grid-container" class="web-inner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- 页面底部 -->
+        <footer>© 2016 domob.cn - RTB后台数据监测</footer>
+    </div>
+    <script src="js/jquery-1.11.3.min.js?v=895323e" type="text/javascript"></script>
+    <script src="js/g2.js?v=45ab9a6" type="text/javascript"></script>
+    <script src="js/cnb_tool.js?v=3477e38" type="text/javascript"></script>
+    <script src="js/stackgrid.adem.js?v=6f09b03" type="text/javascript"></script>
+    <script src="js/bootstrap-datepicker.min.js?v=4b68703" type="text/javascript"></script>
+    <script src="js/index.js?v=365a7bf" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#datepicker').datepicker({
+            format: "yyyy/mm/dd",
+            clearBtn: true,
+            language: "zh-CN",
+            orientation: "bottom left",
+            forceParse: false,
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $('.con-opt > span').click(function(event) {
+            $(this).siblings('.input-group').toggleClass('cnb-show');
+            if ($(this).siblings('.input-group').hasClass('cnb-show')) {
+                $(this).text('-关闭选择时间-');
+            } else {
+                $(this).text('-选择统计时间-');
+            }
+        });
+    </script>
+</body>
+</html>

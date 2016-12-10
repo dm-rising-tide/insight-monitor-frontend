@@ -1,0 +1,19 @@
+/* 
+ * @Author: 陈能堡 - 梦幻雪冰
+ *          http://www.h5course.com/
+ *          http://m18050905128.blog.163.com/
+ *          https://github.com/chennengbao
+ * @Date:   2016-08-25 19:27:59
+ * @Last Modified by:   陈能堡 - 梦幻雪冰
+ * @Last Modified time: 2016-10-26 16:22:38
+ *
+ * @cnb-radius      补全CSS3圆角的内核前缀
+ * @cnb-shadow      补全CSS3阴影的内核前缀
+ * @cnb-transition  补全CSS3过渡的内核前缀
+ * @cnb-animation   补全CSS3动画的内核前缀
+ * @cnb-transform   补全CSS3变形的内核前缀 
+ */
+.cnb-sizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
